@@ -16,14 +16,14 @@ namespace Hemuppgift_Arv_Temp.Game
         {
 
             int pins;
-            if (board.PinsLeft > 3)
+            if (board.noPins > 3)
             {
-                pins = (board.PinsLeft - 1) % 3 == 0 ? 1 : 2; 
+                pins = (board.noPins - 1) % 3 == 0 ? 1 : 2; 
             }
 
             else
             {
-                pins = board.PinsLeft == 3 ? 2 : 1;
+                pins = board.noPins == 3 ? 2 : 1;
             }
 
             board.TakePins(pins);

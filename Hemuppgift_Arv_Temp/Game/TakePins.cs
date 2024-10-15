@@ -10,23 +10,23 @@ namespace Hemuppgift_Arv_Temp
         {
             Board board = new Board(10); 
             Player player1 = new HumanPlayer("Spelare 1");
-            Player player2 = new SmartComputer("Datorn");
+            Player player2 = new ComputerPlayer("Datorn");
 
             Player currentPlayer = player1;
 
-            while (!board.IsGameOver())
+            while (!board.GetNoPins())
             {
-                Console.WriteLine($"Just nu finns det {board.PinsLeft} stickor kvar.");
+                Console.WriteLine($"Just nu finns det {board.noPins} stickor kvar.");
                 int pinsTaken = currentPlayer.TakePins(board);
 
                 if (pinsTaken > 0)
                 {
-                    Console.WriteLine($"{currentPlayer.Name} har tagit {pinsTaken}  antal stickor.");
+                    Console.WriteLine($"{currentPlayer.UserId} har tagit {pinsTaken}  antal stickor.");
                 }
 
-                if (board.IsGameOver())
+                if (board.GetNoPins())
                 {
-                    Console.WriteLine($"Vinnaren är {currentPlayer.Name}!");
+                    Console.WriteLine($"Vinnaren är {currentPlayer.UserId}!");
                     break;
                 }
 

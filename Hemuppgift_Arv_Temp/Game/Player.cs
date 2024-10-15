@@ -8,11 +8,11 @@ namespace Hemuppgift_Arv_Temp.Game
 {
     public abstract class Player
     {
-        public string Name { get; set; }
+        public string UserId { get; set; }
 
-        public Player(string name)
+        public Player(string UserId)
         {
-            Name = name;
+           this.UserId = UserId;
         }
 
         public abstract int TakePins(Board board);

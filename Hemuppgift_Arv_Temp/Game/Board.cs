@@ -8,27 +8,27 @@ namespace Hemuppgift_Arv_Temp.Game
 {
     public class Board
     {
-        public int PinsLeft { get; set; }
+        public int noPins { get; set; }
 
         public Board(int startingPins)
         {
-            PinsLeft = startingPins;
+            noPins = startingPins;
         }
 
         public bool TakePins(int numberOfPins)
         {
-            if (numberOfPins < 1 || numberOfPins > 2 || numberOfPins > PinsLeft)
+            if (numberOfPins < 1 || numberOfPins > 2 || numberOfPins > noPins)
             {
                 return false;
             }
 
-            PinsLeft -= numberOfPins;
+            noPins -= numberOfPins;
             return true;
         }
 
-        public bool IsGameOver()
+        public bool GetNoPins()
         {
-            return PinsLeft == 0;
+            return noPins == 0;
         }
     }
 }

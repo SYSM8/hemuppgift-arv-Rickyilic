@@ -1,0 +1,31 @@
+﻿F2 a) Det är en basklass
+b) Player p = new Player("Aegon");
+Felaktig
+Eftersom Player i detta fall är en abstrakt klass
+
+Player p = new HumanPlayer("Alicent");
+Korrekt.
+Player kan tilldelas till Humanplayer eftersom HumanPlayer är en subklass
+till Player
+
+HumanPlayer p = new HumanPlayer("Rhaenyra");
+Korrekt.
+Kan tilldelas eftersom variabeln HumanPlayer är samma som typen av objektet som skapas
+
+HumanPlayer p = new ComputerPlayer("Aemond");
+Felaktig.
+HumanpPlayer och ComputerPlayer är båda subklasser och då kan tilldelningen inte ske.
+ 
+
+ - I programmet för spelet dra stickor använder vi arv (superklassen
+Player och underklasserna HumanPlayer och ComputerPlayer).
+Vad har vi vunnit med detta?
+
+svar: Vi kan återanvända koden med arv och i detta fall hantera olika typer av spelare.
+
+
+- Det finns en abstrakt metod i superklassen Player. 
+Vad är en abstrakt metod? Varför finns den där?
+
+svar: Det är en metod utan implementation i basklassen som implementeras senare av 
+subklasserna. Finns för att kunna ge varje subklass en egen implementation av metoden.
